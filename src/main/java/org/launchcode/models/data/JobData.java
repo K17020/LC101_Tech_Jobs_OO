@@ -11,6 +11,7 @@ import java.util.HashMap;
  */
 public class JobData {
 
+    // Holds all the job objects
     private ArrayList<Job> jobs = new ArrayList<>();
     private static JobData instance;
 
@@ -32,6 +33,7 @@ public class JobData {
         return instance;
     }
 
+    // Finds the job i'm looking for by the ID and then returns the job from the array
     public Job findById(int id) {
         for (Job job : jobs) {
             if (job.getId() == id)
