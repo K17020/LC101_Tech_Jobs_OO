@@ -27,8 +27,15 @@ public class JobForm {
         with correct validation attributes and display names.
         Don't forget to add getters and setters
      */
+
+    // This defines the id for the new object when its created
+    @NotNull
     private int locationId;
-    private int coreCompetenciesID;
+
+    @NotNull
+    private int coreCompetenciesId;
+
+    @NotNull
     private int positionTypesId;
 
 
@@ -109,12 +116,12 @@ public class JobForm {
         this.locationId = locationId;
     }
 
-    public int getCoreCompetenciesID() {
-        return coreCompetenciesID;
+    public int getCoreCompetenciesId() {
+        return coreCompetenciesId;
     }
 
-    public void setCoreCompetenciesID(int coreCompetenciesID) {
-        this.coreCompetenciesID = coreCompetenciesID;
+    public void setCoreCompetenciesId(int coreCompetenciesId) {
+        this.coreCompetenciesId = coreCompetenciesId;
     }
 
     public int getPositionTypesId() {

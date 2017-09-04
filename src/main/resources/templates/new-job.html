@@ -27,12 +27,34 @@
 
         <!-- TODO #5 - Create <select> dropdowns for other job fields -->
 
+
+        <!--This creates a drop down menu with the options in each categories -->
         <div class="form-group">
-            <label th:for="LocationId">Locations</label>
+            <label th:for="locationId">Locations</label>
+            <!-- This is similar to id="locationId" text="locationId" value="locationId"-->
             <select th:field="*{locationId}">
+                <!-- Getting the options from the object-->
                 <option th:each="location : *{locations}"
                         th:value="${location.id}"
                         th:text="${location.value}"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label th:for="coreCompetenciesId">Core Competencies</label>
+            <select th:field="*{coreCompetenciesId}">
+                <option th:each="core : *{coreCompetencies}"
+                        th:value="${core.id}"
+                        th:text="${core.value}"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label th:for="positionTypesId">Position Type</label>
+            <select th:field="*{positionTypes}">
+                <option th:each="positions : *{positionTypes}"
+                        th:value="${positions.id}"
+                        th:text="${positions.value}"></option>
             </select>
         </div>
 
