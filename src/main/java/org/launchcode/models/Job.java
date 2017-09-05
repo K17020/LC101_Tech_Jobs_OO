@@ -14,7 +14,7 @@ public class Job {
     private PositionType positionType;
     private CoreCompetency coreCompetency;
 
-    public Job() {
+    public Job() { // default constructor
         id = nextId;
         nextId++;
     }
@@ -22,7 +22,7 @@ public class Job {
     public Job(String aName, Employer aEmployer, Location aLocation,
                PositionType aPositionType, CoreCompetency aSkill) {
 
-        this();
+        this(); // default constructor
 
         name = aName;
         employer = aEmployer;
