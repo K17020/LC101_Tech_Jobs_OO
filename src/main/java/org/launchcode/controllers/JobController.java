@@ -57,13 +57,7 @@ public class JobController {
         // See job class for constructor
 
         // builds a  new job object
-        Job newJob = new job(jobForm.getName(),
-                jobForm.getEmployers(),
-                jobForm.getLocations(),
-                jobForm.getPositionTypes(),
-                jobForm.getCoreCompetencies());
 
-        jobData.add(newJob);
 
         return "";
 

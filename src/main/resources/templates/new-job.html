@@ -51,11 +51,8 @@
 
         <div class="form-group">
             <label th:for="positionTypesId">Position Type</label>
-            <select th:field="*{positionTypes}">
-                <option th:each="positions : *{positionTypes}"
-                        th:value="${positions.id}"
-                        th:text="${positions.value}"></option>
-            </select>
+        <!--// TODO #1 - fix the option select for the view-->
+
         </div>
 
         <input type="submit" value="Add Job" />
