@@ -57,9 +57,22 @@ public class JobController {
         // See job class for constructor
 
         // builds a  new job object
+        Job newJob = new Job();
 
+        // Need to get information from the job form object
 
-        return "";
+        // Getting the fields from the HTML page and adds them to the object
+            newJob.setName(jobForm.getName());
+            newJob.setEmployer(jobData.getEmployers().findById(jobForm.getEmployerId()));
+            newJob.setLocation(jobData.getLocations().findById(jobForm.getLocationId()));
+            newJob.setCoreCompetency(jobData.getCoreCompetencies().findById(jobForm.getCoreCompetenciesId()));
+            newJob.setPositionType(jobData.getPositionTypes().findById(jobForm.getPositionTypesId()));
+
+        // Adds the new job once all the fields are filled out.
+            jobData.add(newJob);
+
+        // redirect to the page of the user once they add it
+        return "redirect:?id=" + newJob.getId();
 
     }
 }
